@@ -1,29 +1,38 @@
-product = [
+let product = [
     {
-        price : 200,
-        discount: 20
+        price : 1000,
+        discount_percentage: 50 //500
 
     },
     {
-        price : 100,
-        discout: 10
+        price : 350,
+        discount_percentage: 10 //315
     },
     {
-        price:500,
-        discount:40
+        price:1000,
+        discount_percentage:90 //100
     },
     {
-        price :1000,
-        discount:60
+        price :200,
+        discount_percentage:60 //80
     },
     {
         price : 300,
-        discount:30
+        discount_percentage:40 //180
 
     }
 
 ]
 
 function calculateTotal(){
+    let total_price = 0
+    let after_discount_price = 0
+    product.forEach((product) => {
+        after_discount_price = product.price - (product.price * (product.discount_percentage/100))
+        total_price += after_discount_price
+    })
+    console.log(`Total price after discount :  ${total_price}`)
     
 }
+
+calculateTotal()
