@@ -12,3 +12,6 @@ if(score >= 60 && score <= 69){
 if(score <= 59){
     console.log('Grade : F')
 }
+
+
+//
